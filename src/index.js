@@ -8,5 +8,12 @@ import * as serviceWorker from "./serviceWorker";
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
-ReactDOM.render(<Card />, document.getElementById("root"));
+ReactDOM.render(
+  <div>
+    <Card />
+    <Card />
+    <Card />
+  </div>,
+  document.getElementById("root")
+);
 serviceWorker.register();
