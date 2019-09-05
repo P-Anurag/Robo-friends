@@ -1,18 +1,16 @@
 import React, { Component } from "react";
 
-class Card extends Component {
-  state = {};
-  render() {
-    return (
+const Card = props => {
+  const { id, name, email } = props;
+  return (
+    <div className="bg-light-green dib br3 pa3 ma2 grow">
+      <img alt="Robo pic" src={`https://robohash.org/${id}?150x200`} />
       <div>
-        <img alt="Robo pic" src="https://robohash.org/test?200x200" />
-        <div>
-          <h1>Jane Doe</h1>
-          <p>jane.doe@gmail.com</p>
-        </div>
+        <h1 className="underline">{name}</h1>
+        <p>{email} </p>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Card;
